@@ -1,0 +1,23 @@
+<!-- <form #checkboxForm="ngForm" (ngSubmit)="onSubmit()">
+  <label>
+    <input type="checkbox" name="terms" [(ngModel)]="isChecked" required>
+    Accept terms and conditions
+  </label>
+  <div *ngIf="checkboxForm.invalid && checkboxForm.touched">
+    Please accept the terms and conditions.
+  </div>
+  <button type="submit">Submit</button>
+</form> -->
+
+<form #checkboxForm="ngForm" (ngSubmit)="onSubmit()">
+  <label>
+    <input type="checkbox" name="terms" [(ngModel)]="isChecked" required>
+    Accept terms and conditions
+  </label>
+  <div>
+  @if(checkboxForm.invalid && checkboxForm.touched) {
+    <h3>Please accept the terms and conditions.</h3>
+   }
+   </div>
+  <button type="submit">Submit</button>
+</form>
